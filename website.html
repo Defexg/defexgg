@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligaties Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .data { margin: 20px; font-size: 24px; }
+    </style>
+</head>
+<body>
+    <h1> XDG Investments Ltd.  </h1>
+   
+    <script>
+        async function fetchData() {
+            const response = await fetch('https://api.exemple.com/bonds'); // Vervang met een echte API.
+            const data = await response.json();
+            document.getElementById("price").innerText = `€${data.price}`;
+        }
+        setInterval(fetchData, 1000); // Update elke seconde
+    </script>
+</body>
+</html>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500 Index"
+      },
+      {
+        "proName": "FX_IDC:EURUSD",
+        "title": "EUR to USD"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "description": "GOLD (XAU/USD)",
+        "proName": "CAPITALCOM:GOLD"
+      },
+      {
+        "description": "Euro Stoxx50 Index",
+        "proName": "ICMARKETS:STOXX50"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+    {
+    "width": "1000",
+    "height": "620",
+    "symbol": "NASDAQ:AAPL",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "backgroundColor": "rgba(255, 255, 255, 1)",
+    "allow_symbol_change": true,
+    "calendar": false,
+    "studies": [
+      "STD;Stochastic_RSI"
+    ],
+    "support_host": "https://www.tradingview.com"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+  {
+  "width": 1000,
+  "height": 550,
+  "symbolsGroups": [
+    {
+      "name": "Indices",
+      "originalName": "Indices",
+      "symbols": [
+        {
+          "name": "FOREXCOM:SPXUSD",
+          "displayName": "S&P 500 Index"
+        },
+        {
+          "name": "FOREXCOM:DJI",
+          "displayName": "Dow Jones Industrial Average Index"
+        },
+        {
+          "name": "INDEX:NKY",
+          "displayName": "Japan 225"
+        },
+        {
+          "name": "INDEX:DEU40",
+          "displayName": "DAX Index"
+        },
+        {
+          "name": "FOREXCOM:UKXGBP",
+          "displayName": "FTSE 100 Index"
+        }
+      ]
+    },
+    {
+      "name": "Futures",
+      "originalName": "Futures",
+      "symbols": [
+        {
+          "name": "CME_MINI:ES1!",
+          "displayName": "S&P 500"
+        },
+        {
+          "name": "CME:6E1!",
+          "displayName": "Euro"
+        },
+        {
+          "name": "COMEX:GC1!",
+          "displayName": "Gold"
+        },
+        {
+          "name": "NYMEX:CL1!",
+          "displayName": "WTI Crude Oil"
+        },
+        {
+          "name": "NYMEX:NG1!",
+          "displayName": "Gas"
+        },
+        {
+          "name": "CBOT:ZC1!",
+          "displayName": "Corn"
+        }
+      ]
+    },
+    {
+      "name": "Bonds",
+      "originalName": "Bonds",
+      "symbols": [
+        {
+          "name": "CBOT:ZB1!",
+          "displayName": "T-Bond"
+        },
+        {
+          "name": "CBOT:UB1!",
+          "displayName": "Ultra T-Bond"
+        },
+        {
+          "name": "EUREX:FGBL1!",
+          "displayName": "Euro Bund"
+        },
+        {
+          "name": "EUREX:FBTP1!",
+          "displayName": "Euro BTP"
+        },
+        {
+          "name": "EUREX:FGBM1!",
+          "displayName": "Euro BOBL"
+        }
+      ]
+    },
+    {
+      "name": "Forex",
+      "originalName": "Forex",
+      "symbols": [
+        {
+          "name": "FX:EURUSD",
+          "displayName": "EUR to USD"
+        },
+        {
+          "name": "FX:GBPUSD",
+          "displayName": "GBP to USD"
+        },
+        {
+          "name": "FX:USDJPY",
+          "displayName": "USD to JPY"
+        },
+        {
+          "name": "FX:USDCHF",
+          "displayName": "USD to CHF"
+        },
+        {
+          "name": "FX:AUDUSD",
+          "displayName": "AUD to USD"
+        },
+        {
+          "name": "FX:USDCAD",
+          "displayName": "USD to CAD"
+        }
+      ]
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "colorTheme": "light",
+  "locale": "en",
+  "backgroundColor": "#ffffff"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="nl">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Forture Investments</title>
+      <style>
+          /* CSS voor Flexbox */
+          .content-row {
+              display: flex; /* Zet de widgets naast elkaar */
+              gap: 20px; /* Ruimte tussen de widgets */
+              margin-top: 20px; /* Optionele marge boven de widgets */
+          }
+  
+          .top-stories, .calendar {
+              flex: 1; /* Beide widgets krijgen evenveel ruimte */
+          }
+  
+          .tradingview-widget-container {
+              width: 100%; /* Zorgt ervoor dat de widgets flexibel zijn */
+              height: auto; /* Laat de hoogte zich aanpassen aan de inhoud */
+          }
+  
+          /* Zorg ervoor dat de widgets onder elkaar komen bij kleine schermen */
+          @media (max-width: 768px) {
+              .content-row {
+                  flex-direction: column; /* Zet de widgets onder elkaar op kleine schermen */
+              }
+          }
+      </style>
+  </head>
+  <body>
+  
+  
+      <div class="content-row">
+          <!-- Top Stories Widget -->
+          <div class="top-stories">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright">
+                      <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                          <span class="blue-text">Track all markets on TradingView</span>
+                      </a>
+                  </div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                  {
+                      "feedMode": "all_symbols",
+                      "isTransparent": true,
+                      "displayMode": "adaptive",
+                      "width": "100%",
+                      "height": "550",
+                      "colorTheme": "light",
+                      "locale": "en"
+                  }
+                  </script>
+              </div>
+              <!-- TradingView Widget END -->
+          </div>
+  
+          <!-- Kalender Widget -->
+          <div class="calendar">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright">
+                      <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                          <span class="blue-text">Track all markets on TradingView</span>
+                      </a>
+                  </div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                  {
+                      "colorTheme": "light",
+                      "isTransparent": true,
+                      "width": "100%",
+                      "height": "550",
+                      "locale": "en",
+                      "importanceFilter": "-1,0,1",
+                      "countryFilter": "ar,au,br,ca,cn,fr,de,in,id,it,jp,kr,mx,ru,sa,za,tr,gb,us,eu"
+                  }
+                  </script>
+              </div>
+              <!-- TradingView Widget END -->
+          </div>
+      </div>
+  
+  </body>
+  </html>
+  
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+    {
+    "width": "1000",
+    "height": "400",
+    "currencies": [
+      "EUR",
+      "USD",
+      "JPY",
+      "GBP",
+      "CHF",
+      "AUD",
+      "CAD",
+      "NZD",
+      "CNY"
+    ],
+    "isTransparent": false,
+    "colorTheme": "light",
+    "locale": "en",
+    "backgroundColor": "#ffffff"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+  
+  
